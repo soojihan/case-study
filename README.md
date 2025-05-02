@@ -50,6 +50,11 @@ poetry run python -m forward_context.main
 Once running, open your browser at:
 [http://localhost:8000/docs](http://localhost:8000/docs)
 
+## Testing
+```
+poetry run pytest
+```
+
 ## Functionality
 - Cleans HTML content
 - Extracts linked sentences from source documents
