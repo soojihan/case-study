@@ -23,6 +23,8 @@ case-study/
 ### 1. Clone the Repository
 ```
 git clone https://github.com/your-username/case-study.git
+```
+```
 cd case-study
 ```
 ### 2. Install Dependencies
@@ -37,7 +39,19 @@ cd case-study
   source .venv/bin/activate  # or .venv\Scripts\activate on Windows
   pip install -r requirements.txt
   ```
+### 3. Start a Qdrant instance with storage mapped to your local ./qdrant_storage directory and ports exposed
+```
+cd qdrant
+```
+```
+docker run -p 6333:6333 -p 6334:6334 \
+  -v "$(pwd)/qdrant_storage:/qdrant/storage:z" \
+  qdrant/qdrant
+```
 ### 3. Run the API service
+```
+cd ..
+```
 **Option 1: Direct Python**
 ```
 python forward_context/main.py
