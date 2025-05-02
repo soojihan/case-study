@@ -12,7 +12,7 @@ case-study/
 │   ├── lib/                     # Shared library components
 │   ├── utils/                   # Utility scripts
 │   ├── vector_database/         # Qdrant ingestion and management
-    ├── hybrid_search.py         # Hybrid search script
+│   ├── hybrid_search.py         # Hybrid search script
 │   └── main.py                  # FastAPI entry point
 ├── qdrant/                      # Qdrant local storage
 ├── .dvc/                        # DVC tracking for data versioning
