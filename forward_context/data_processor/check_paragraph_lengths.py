@@ -1,7 +1,7 @@
 from forward_context.config.config import SPLIT_PARAGRAPH_FILE
 from forward_context.lib.load_data import load_data
 from statistics import mean, median
-from forward_context.resutils.configure_logger import configure_logging
+from forward_context.utils.configure_logger import configure_logging
 
 
 logging = configure_logging()
