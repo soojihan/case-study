@@ -11,7 +11,10 @@ HREF_RE = re.compile(r'href\s*=\s*[\'"]([^\'"]+)[\'"]', re.I)  # pulls any href=
 
 def clean_unicode(txt):
     """Squash whitespace and remove non-breaking spaces."""
-    return " ".join(txt.replace("\u00a0", " ").split())
+    cleaned = " ".join(txt.replace("\u00a0", " ").split())
+    # Remove space before common punctuation
+    cleaned = re.sub(r"\s+([.,!?;:])", r"\1", cleaned)
+    return cleaned.strip()
 
 
 def extract_refs(tag):
